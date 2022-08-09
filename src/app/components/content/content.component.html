@@ -1,0 +1,16 @@
+<div *ngIf="posts.length === 0">Loading...</div>
+<div class="scrollList"  *ngIf="posts.length !== 0">
+
+        <div class="post-container">
+            <post *ngFor="let post of posts" [redditPost]="post"></post>
+        </div>
+        <div class="page-selector">
+            <button (click)="getPreviousPage()" [disabled]="firstPage()">
+                <img type="button" src="../../../assets/images/chvr2.png" >
+            </button>
+            {{ page }}
+            <button  (click)="getNextPage()" [disabled]="lastPage()">
+                <img class="flip-image" src="../../../assets/images/chvr2.png">
+            </button>
+     </div>
+</div>

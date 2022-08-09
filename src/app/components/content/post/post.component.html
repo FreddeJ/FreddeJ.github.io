@@ -1,0 +1,28 @@
+<div class="post-container">
+    <img class="post-thumbnail" src={{getThumbnailLink()}} alt="">
+    <div class="post-content">
+        <div class="post-header">
+            <div class="post-comments">
+                <img src="../../../../assets/images/comment.png">
+                {{ redditPost.num_comments}}
+            </div>
+            <div class="post-score">
+                <img src="../../../../assets/images/updutt.png">
+                {{ redditPost.score }}
+            </div>
+        </div>
+        <div class ="post-body">
+            <div class ="post-title">{{ redditPost.title }}</div>
+            <div class ="post-text" *ngIf="displayText">{{ redditPost.selftext }}</div>
+        </div>
+        <div class="post-footer">
+            <div class="post-created">
+                {{ "Posted " + (redditPost.created | dateAgo) + " by " + redditPost.author}}
+            </div>
+            <div class="post-showmore" (click)="toggleText()" *ngIf="redditPost.selftext.length > 0">
+                <img [ngClass]="{'flip-image':  displayText}" src="../../../../assets/images/chvr1.png">
+                {{displayText ? "Show less" : "Show more"}}
+            </div>
+        </div>
+    </div>
+</div>

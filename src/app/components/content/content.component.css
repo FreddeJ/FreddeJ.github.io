@@ -1,0 +1,29 @@
+.scrollList {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.post-container {
+    flex: 1;
+}
+
+.page-selector {
+    color: white;
+    margin: auto;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 19px;
+
+    align-content: center;
+    display: flex;
+    gap: 30px;
+
+}
+ .page-selector > button {
+    background-color: inherit;
+    border: 0;
+    cursor: pointer;
+ }
