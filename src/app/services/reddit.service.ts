@@ -7,7 +7,7 @@ import { RedditGet } from '../models/redditPost';
   providedIn: 'root'
 })
 export class RedditService {
-  private redditUrl = 'http://www.reddit.com/r/golf.json'
+  private redditUrl = 'https://www.reddit.com/r/golf.json'
 
   constructor(private http: HttpClient) { }
 
